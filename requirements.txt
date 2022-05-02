@@ -1,0 +1,8 @@
+imblearn
+sklearn
+matplotlib
+tqdmqqq
+stellargraph
+tensorflow_addons
+seaborn
+opencv-contrib-python
