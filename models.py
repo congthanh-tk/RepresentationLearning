@@ -30,7 +30,7 @@ class MetricLearningModel(nn.Module):
         ) for _ in range(num_layers)])
 
         self.classifier = nn.Sequential(
-            nn.Linear(in_features=self.hidden_dim, out_features=2),
+            nn.Linear(in_features=self.hidden_dim, out_features=3),
             nn.LogSoftmax(dim=-1)
         )
         self.lambda1 = lambda1

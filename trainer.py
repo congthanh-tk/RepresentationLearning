@@ -138,10 +138,10 @@ def evaluate(model, iterator_function, _batch_count, cuda_device, output_buffer=
             predictions.extend(batch_pred)
             expectations.extend(batch_tgt)
         model.train()
-        return acc(expectations, predictions) * 100, \
-               pr(expectations, predictions) * 100, \
-               rc(expectations, predictions) * 100, \
-               f1(expectations, predictions) * 100,
+        return acc(expectations, predictions, average='micro') * 100, \
+               pr(expectations, predictions, average='micro') * 100, \
+               rc(expectations, predictions, average='micro') * 100, \
+               f1(expectations, predictions, average='micro') * 100,
 
 
 def show_representation(model, iterator_function, _batch_count, cuda_device, name, output_buffer=sys.stderr):
